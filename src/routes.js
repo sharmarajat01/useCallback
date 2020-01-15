@@ -1,10 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import homeComponent from './home'
-import demo from './demo';
-import counterOne from './counter';
-import NotFound from './notFound';
+import homeComponent from './pages/home'
+import demo from './pages/demo';
+import counterOne from './pages/counter';
+import NotFound from './pages/notFound';
+import Timer from './pages/timer';
 
 
 function Routes(props) {
@@ -14,6 +15,7 @@ function Routes(props) {
                 <Route path='/home' exact component={homeComponent} {...props} />
                 <Route path='/demo' exact component={demo} {...props} />
                 <Route path='/counter' exact component={counterOne} {...props} />
+                <Route path='/timer' exact component={Timer} />
                 <Route component={NotFound} />
             </Switch>
         </Router>
